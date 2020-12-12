@@ -1,24 +1,49 @@
 package com.company;
 
+import java.util.Scanner;
+
 public class Task5 {
 
    // Основные задачи:
 
-    // Задача 1. Используя цикл for вывести те числа которые делятся на 5 но не делятся на 3
-    // из интервала 1...100
+    // Задача 1. Используя цикл for вывести те числа которые делятся на 5, но не делятся на 3 из интервала 1...100
     public static void exercise01() {
-
+        System.out.println("Добрый день!");
+        System.out.println("Наш помощник выведет числа которые делятся на 5 но не делятся на 3 из интерала 1...100:");
+        for (int number = 1; number <= 100; number++) {
+            if (number % 5 == 0 && number % 3 != 0) {
+                System.out.println(number);
+            }
+        }
     }
 
     // Задача 2. Вывести все простые числа из интервала 1...100
     public static void exercise02() {
-
+        System.out.println("Добрый день!");
+        System.out.println("Наш помощник выведет все простые числа из интервала 1...100:");
+        for (int number = 1, i = 2; number <= 100; i++ , number++) {
+            if (number % i == 0) {
+                return;
+            }
+            System.out.println(number);
+        }
     }
 
-    // Задача 3. Пользователь поочередно вводит числа, пока не введет 0,
-    // найти из среднее арифметичесткое, использовать break
+    // Задача 3. Пользователь поочередно вводит числа, пока не введет 0, найти из среднее арифметичесткое,
+    // использовать break
     public static void exercise03() {
-
+        System.out.println("Добрый день!");
+        System.out.println("Наш помощник посчитает среднее арифметическое всех введенных Вами чисел (до введенного числа 0):");
+        Scanner sc = new Scanner(System.in);
+        for (int number = sc.nextInt(), i = 0, sum = 0; ) {
+            double result = 0;
+            if (number == 0) {
+                break;
+            }
+            sum += number;
+            result = sum / i;
+            System.out.println("Среднее арифметическое = " + result);
+        }
     }
 
     // Дополнительные задачи:
@@ -44,6 +69,6 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-	// write your code here
+        exercise02();
     }
 }
