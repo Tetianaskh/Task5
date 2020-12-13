@@ -21,7 +21,7 @@ public class Task5 {
     public static void exercise02() {
         System.out.println("Добрый день!");
         System.out.println("Наш помощник выведет все простые числа из интервала 1...100:");
-        for (int number = 1, i = 2; number <= 100; number++) {
+        for (int number = 1, i = 2; number <= 100; number++, i++) {
             if (number % i == 0) {
                 continue;
             }
@@ -52,6 +52,10 @@ public class Task5 {
     // Дополнительные задачи:
 
     // Задача 1. Написать метод, который принимает 2 целых числа и возвращает их наибольший общий делитель
+    public static int getGreatestCommonFactor (int number1, int number2) {
+
+    }
+
     public static void exercise001() {
         System.out.println("Добрый день!");
         System.out.println("Наш помощник посчитает наибольший общий делитель двух целых чисел:");
@@ -63,7 +67,7 @@ public class Task5 {
 
     }
 
-    // Задача 2. Пользователь вводит число описывающее марштур? где каждая цифра означает направление
+    // Задача 2. Пользователь вводит число описывающее маршрут? где каждая цифра означает направление
     // 1 - прямо, 2 - направо, 3 - налево, вывести этот маршрут текстом, причем если единица повторяется
     // вывести "продолжайте движение прямо"
     // Например? если пользователь введет 1211312
@@ -79,6 +83,6 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-        exercise03();
+        exercise02();
     }
 }
