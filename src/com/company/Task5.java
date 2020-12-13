@@ -34,15 +34,17 @@ public class Task5 {
     public static void exercise03() {
         System.out.println("Добрый день!");
         System.out.println("Наш помощник посчитает среднее арифметическое всех введенных Вами чисел (до введенного числа 0):");
+        System.out.println("Введите, пожалуйста, число:");
         Scanner sc = new Scanner(System.in);
-        for (int number = sc.nextInt(), i = 0, sum = 0; ) {
+        for (double number = sc.nextInt(), i = 1, sum = 0; number > 0; i++) {
             double result = 0;
             if (number == 0) {
-                break;
+                return;
             }
             sum += number;
             result = sum / i;
             System.out.println("Среднее арифметическое = " + result);
+            break;
         }
     }
 
@@ -69,6 +71,6 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-        exercise02();
+        exercise03();
     }
 }
