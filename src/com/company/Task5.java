@@ -21,37 +21,45 @@ public class Task5 {
     public static void exercise02() {
         System.out.println("Добрый день!");
         System.out.println("Наш помощник выведет все простые числа из интервала 1...100:");
-        for (int number = 1, i = 2; number <= 100; i++ , number++) {
+        for (int number = 1, i = 2; number <= 100; number++) {
             if (number % i == 0) {
-                return;
+                continue;
             }
             System.out.println(number);
         }
     }
 
-    // Задача 3. Пользователь поочередно вводит числа, пока не введет 0, найти из среднее арифметичесткое,
-    // использовать break
+    // Задача 3. Пользователь поочередно вводит числа, пока не введет 0, найти их среднее арифметичесткое, использовать break
     public static void exercise03() {
         System.out.println("Добрый день!");
         System.out.println("Наш помощник посчитает среднее арифметическое всех введенных Вами чисел (до введенного числа 0):");
-        System.out.println("Введите, пожалуйста, число:");
         Scanner sc = new Scanner(System.in);
-        for (double number = sc.nextInt(), i = 1, sum = 0; number > 0; i++) {
-            double result = 0;
-            if (number == 0) {
-                return;
-            }
+        int number;
+        int i = 0;
+        double sum = 0;
+        double result;
+        do {
+            System.out.println("Введите, пожалуйста, число:");
+            number = sc.nextInt();
             sum += number;
+            i++;
             result = sum / i;
-            System.out.println("Среднее арифметическое = " + result);
-            break;
-        }
+        } while (number != 0);
+
+        System.out.println("Среднее арифметическое = " + result);
     }
 
     // Дополнительные задачи:
 
     // Задача 1. Написать метод, который принимает 2 целых числа и возвращает их наибольший общий делитель
     public static void exercise001() {
+        System.out.println("Добрый день!");
+        System.out.println("Наш помощник посчитает наибольший общий делитель двух целых чисел:");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите, пожалуйста, два целых числа:");
+        int number1 = sc.nextInt();
+        int number2 = sc.nextInt();
+
 
     }
 
