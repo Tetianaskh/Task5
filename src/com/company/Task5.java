@@ -18,14 +18,24 @@ public class Task5 {
     }
 
     // Задача 2. Вывести все простые числа из интервала 1...100
+    public static boolean isPrimeNumber (int number) {
+        int i = 2;
+        while (i < number) {
+            if (number % i == 0) {
+                return false;
+            }
+            i++;
+        }
+        return true;
+    }
+
     public static void exercise02() {
         System.out.println("Добрый день!");
         System.out.println("Наш помощник выведет все простые числа из интервала 1...100:");
-        for (int number = 1, i = 2; number <= 100; number++, i++) {
-            if (number % i == 0) {
-                continue;
+        for (int number = 1; number <= 100; number++) {
+            if (isPrimeNumber(number)) {
+                System.out.println(number);
             }
-            System.out.println(number);
         }
     }
 
@@ -42,19 +52,25 @@ public class Task5 {
             System.out.println("Введите, пожалуйста, число:");
             number = sc.nextInt();
             sum += number;
-            i++;
-            result = sum / i;
             if (number == 0) {
                 break;
             }
+            i++;
         } while (true);
-
+        result = sum / i;
         System.out.println("Среднее арифметическое = " + result);
     }
 
     // Дополнительные задачи:
 
     // Задача 1. Написать метод, который принимает 2 целых числа и возвращает их наибольший общий делитель
+
+    /***
+     * Вычисление наибольшего общего делителя двух целых чисел
+      * @param number1 - первое число вводимое пользователем
+     * @param number2 - второе число вводимое пользователем
+     * @return -
+     */
     public static int getGreatestCommonFactor (int number1, int number2) {
         while (number2 != 0) {
             int remainderOfDivision = number1 % number2;
@@ -89,7 +105,7 @@ public class Task5 {
 
     }
 
-    public static void main(String[] args) {
-        exercise001();
+        public static void main(String[] args) {
+            exercise02();
+        }
     }
-}
