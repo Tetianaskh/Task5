@@ -18,13 +18,16 @@ public class Task5 {
     }
 
     // Задача 2. Вывести все простые числа из интервала 1...100
+    /***
+     * Проверяет делится ли число на другие числа кроме 1 и самого себя
+     * @param number - число от 1 до 100
+     * @return - простое число или нет
+     */
     public static boolean isPrimeNumber (int number) {
-        int i = 2;
-        while (i < number) {
+        for (int i = 2; i < number; i++) {
             if (number % i == 0) {
                 return false;
             }
-            i++;
         }
         return true;
     }
@@ -102,10 +105,25 @@ public class Task5 {
     // двигайтесь прямо
     // повернитесь направо
     public static void exercise002() {
-
-    }
-
-        public static void main(String[] args) {
-            exercise02();
+        System.out.println("Добрый день!");
+        System.out.println("Наш помощник опишет маршрут из введенных вами чисел:");
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите, пожалуйста, желаемый маршрут (используя цифры от 1 до 3):");
+        String route = sc.nextLine();
+        for (int i = 0; i < route.length(); i++) {
+            if (route.charAt(i) == 1) {
+                System.out.println("Двигайтесь прямо");
+            } else if (route.charAt(i) == 2) {
+                System.out.println("Поверните направо");
+            } else if (route.charAt(i) == 3) {
+                System.out.println("Поверните налево");
+            }
         }
+
     }
+
+
+    public static void main(String[] args) {
+        exercise002();
+    }
+}
