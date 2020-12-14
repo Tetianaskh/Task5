@@ -44,7 +44,10 @@ public class Task5 {
             sum += number;
             i++;
             result = sum / i;
-        } while (number != 0);
+            if (number == 0) {
+                break;
+            }
+        } while (true);
 
         System.out.println("Среднее арифметическое = " + result);
     }
@@ -52,9 +55,9 @@ public class Task5 {
     // Дополнительные задачи:
 
     // Задача 1. Написать метод, который принимает 2 целых числа и возвращает их наибольший общий делитель
-    public static int getGreatestCommonFactor (int number1, int number2) {
-
-    }
+//    public static int getGreatestCommonFactor (int number1, int number2) {
+//
+//    }
 
     public static void exercise001() {
         System.out.println("Добрый день!");
@@ -83,6 +86,6 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-        exercise02();
+        exercise03();
     }
 }
