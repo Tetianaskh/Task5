@@ -111,19 +111,24 @@ public class Task5 {
         System.out.println("Введите, пожалуйста, желаемый маршрут (используя цифры от 1 до 3):");
         String route = sc.nextLine();
         for (int i = 0; i < route.length(); i++) {
-            if (route.charAt(i) == 1) {
-                System.out.println("Двигайтесь прямо");
-            } else if (route.charAt(i) == 2) {
+            if (route.charAt(i) == '1') {
+                if (route.charAt(i - 1) == '1') {
+                    System.out.println("Продолжайте движение прямо");
+                } else System.out.println("Двигайтесь прямо");
+
+            } else if (route.charAt(i) == '2') {
                 System.out.println("Поверните направо");
-            } else if (route.charAt(i) == 3) {
+            } else if (route.charAt(i) == '3') {
                 System.out.println("Поверните налево");
             }
         }
-
     }
 
-
     public static void main(String[] args) {
+        exercise01();
+        exercise02();
+        exercise03();
+        exercise001();
         exercise002();
     }
 }
