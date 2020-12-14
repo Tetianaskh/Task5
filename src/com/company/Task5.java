@@ -55,9 +55,14 @@ public class Task5 {
     // Дополнительные задачи:
 
     // Задача 1. Написать метод, который принимает 2 целых числа и возвращает их наибольший общий делитель
-//    public static int getGreatestCommonFactor (int number1, int number2) {
-//
-//    }
+    public static int getGreatestCommonFactor (int number1, int number2) {
+        while (number2 != 0) {
+            int remainderOfDivision = number1 % number2;
+            number1 = number2;
+            number2 = remainderOfDivision;
+        }
+        return number1;
+    }
 
     public static void exercise001() {
         System.out.println("Добрый день!");
@@ -66,8 +71,7 @@ public class Task5 {
         System.out.println("Введите, пожалуйста, два целых числа:");
         int number1 = sc.nextInt();
         int number2 = sc.nextInt();
-
-
+        System.out.println("Наибольший общий делитель чисел " + number1 + " и " + number2 + " = " + getGreatestCommonFactor(number1, number2));
     }
 
     // Задача 2. Пользователь вводит число описывающее маршрут? где каждая цифра означает направление
@@ -86,6 +90,6 @@ public class Task5 {
     }
 
     public static void main(String[] args) {
-        exercise03();
+        exercise001();
     }
 }
